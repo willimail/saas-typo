@@ -1,11 +1,11 @@
-Feature: Login as a Admin
+
+Feature: Create a Category
   As a Test
   
-  #pure-sea-60281.herokuapp.com admin pkTBQbh 
-  
-  Scenario: Successfully login on Heroku
-    Given Im am on the admin page
-    When I fill in "username" with "admin"
-    And I fill in "password" with "pkTBQbh"
-    Then I should be on the admin content page
+  Scenario: Successfully access to the Category page
+    Given I am on the admin page
+    When I go to the new category page
+    And I am logged into the admin panel
+    Then I should be on the new category page
+    
     

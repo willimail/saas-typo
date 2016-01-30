@@ -24,15 +24,18 @@ class Admin::CategoriesController < Admin::BaseController
   private
 
   def new_or_edit
+    # if !params[:id]
+    #   @last_category = Category.last
+    #   @category = Category.create( :name => '', :permalink => '', :keywords =>'', :description => '')
+    #   @category.id = @last_category.id + 1
+      
+    #   @category.save
+      
+    #   params[:id] = @category.id
+      
+    # end
     @categories = Category.find(:all)
-    
-    id = params[:id]
-    if id == nil
-      id = Category.first.id
-    end
-    @category = Category.find(id)
-    
-    # @category = Category.find(params[:id])
+    @category = Category.find('1')
     @category.attributes = params[:category]
     if request.post?
       respond_to do |format|
