@@ -21,6 +21,10 @@ module NavigationHelpers
       '/admin'
     when /^the new category page$/
       '/admin/categories/new'
+    when /^the edit category page$/
+      'admin/categories/edit/:id'
+      
+      
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
